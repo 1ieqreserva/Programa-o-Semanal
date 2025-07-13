@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | 1ª IEQ RESERVA PR</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Painel Administrativo</h1>
+    <p class="slogan">Gerencie as células da igreja</p>
+  </header>
+
+  <main>
+    <section class="busca-celula">
+      <div id="login-section">
+        <h2>🔐 Login do Administrador</h2>
+        <form id="adminLogin">
+          <input type="password" id="senha" placeholder="Digite a senha" required />
+          <button type="submit">Entrar</button>
+        </form>
+      </div>
+
+      <div id="admin-panel" style="display: none;">
+        <h2>➕ Adicionar Nova Célula</h2>
+        <form id="addCelula">
+          <input type="text" id="nome" placeholder="Nome da célula" required>
+          <select id="tipo" required>
+            <option value="">Tipo de célula</option>
+            <option value="homens">Homens</option>
+            <option value="meninas">Meninas</option>
+          </select>
+          <select id="bairro" required>
+            <option value="">Bairro</option>
+            <option value="centro">Centro</option>
+            <option value="jardim social">Jardim Social</option>
+            <option value="mercer">Mercer</option>
+            <option value="santa helena">Santa Helena</option>
+          </select>
+          <input type="text" id="endereco" placeholder="Endereço completo" required>
+          <input type="text" id="anfitriao" placeholder="Nome do anfitrião" required>
+          <button type="submit">Salvar Célula</button>
+        </form>
+        <p id="sucesso" style="color: green; margin-top: 1rem;"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 1ª IEQ RESERVA PR</p>
+  </footer>
+</body>
+</html>

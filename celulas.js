@@ -1,4 +1,4 @@
-const celulas = [
+const celulasFixas = [
   {
     tipo: "homens",
     bairro: "centro",
@@ -42,9 +42,10 @@ document.getElementById("formCelula").addEventListener("submit", function (e) {
   const tipo = document.getElementById("tipo").value.toLowerCase();
   const bairro = document.getElementById("bairro").value.toLowerCase();
 
-  const celula = celulas.find(
-    c => c.tipo === tipo && c.bairro === bairro
-  );
+  const extras = JSON.parse(localStorage.getItem("celulasExtras")) || [];
+  const todasCelulas = [...celulasFixas, ...extras];
+
+  const celula = todasCelulas.find(c => c.tipo === tipo && c.bairro === bairro);
 
   const resultado = document.getElementById("resultadoCelula");
 
