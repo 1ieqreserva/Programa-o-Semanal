@@ -1,43 +1,74 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: #f9f9f9;
+  background: linear-gradient(to right, #f1f5f9, #e2e8f0);
   color: #333;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Header */
 header {
-  background-color: #4c4c8f;
+  background-color: #2d3e50;
   color: white;
-  padding: 1.5rem;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
+header h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+header .slogan {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #d1d5db;
+}
+
+/* Main */
 main {
   flex: 1;
-  padding: 2rem;
-  max-width: 600px;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 3rem 1rem;
 }
 
-form {
+/* Card */
+.card {
   background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+  animation: fadeIn 1s ease-in-out;
 }
 
+.card h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #2d3e50;
+}
+
+/* Form */
 form label {
-  margin-top: 1rem;
   display: block;
-  font-weight: bold;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #555;
 }
 
 form input,
@@ -45,36 +76,53 @@ form select,
 form button {
   width: 100%;
   margin-top: 0.5rem;
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  padding: 0.9rem;
   font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
 }
 
 form button {
-  margin-top: 1.5rem;
-  background-color: #4c4c8f;
+  background-color: #2d3e50;
   color: white;
   border: none;
-  transition: 0.3s;
+  margin-top: 2rem;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 form button:hover {
-  background-color: #3b3b76;
+  background-color: #1e2d3b;
 }
 
+/* Resultado */
 #resultadoCelula {
   margin-top: 2rem;
-  background: #e2ffe9;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  background: #e6ffed;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #256029;
+  font-weight: 500;
+  border: 1px solid #b6f7c1;
 }
 
+/* Footer */
 footer {
-  background-color: #4c4c8f;
+  background-color: #2d3e50;
   color: white;
   text-align: center;
   padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

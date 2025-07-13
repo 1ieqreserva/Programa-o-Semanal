@@ -2,40 +2,45 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Encontre sua Célula</title>
+  <title>1ª IEQ RESERVA PR | Encontre sua Célula</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script defer src="celulas.js"></script>
 </head>
 <body>
   <header>
-    <h1>🔍 Encontre a Célula Mais Próxima</h1>
+    <h1>1ª IEQ RESERVA PR</h1>
+    <p class="slogan">Uma família para pertencer</p>
   </header>
 
   <main>
-    <form id="formCelula">
-      <label for="tipo">Tipo de Célula:</label>
-      <select id="tipo" required>
-        <option value="">Selecione</option>
-        <option value="homens">Homens</option>
-        <option value="rapazes">Rapazes</option>
-        <option value="meninos">Meninos</option>
-        <option value="crianças">Crianças</option>
-        <option value="moças">Moças</option>
-        <option value="meninas">Meninas</option>
-        <option value="casais">Casais</option>
-      </select>
+    <section class="card">
+      <h2>🔍 Encontre a Célula Mais Próxima</h2>
+      <form id="formCelula">
+        <label for="tipo">Tipo de Célula:</label>
+        <select id="tipo" required>
+          <option value="">Selecione</option>
+          <option value="homens">Homens</option>
+          <option value="rapazes">Rapazes</option>
+          <option value="meninos">Meninos</option>
+          <option value="crianças">Crianças</option>
+          <option value="moças">Moças</option>
+          <option value="meninas">Meninas</option>
+          <option value="casais">Casais</option>
+        </select>
 
-      <label for="bairro">Seu Bairro:</label>
-      <input type="text" id="bairro" placeholder="Ex: Centro" required>
+        <label for="bairro">Seu Bairro:</label>
+        <input type="text" id="bairro" placeholder="Ex: Centro" required>
 
-      <button type="submit">Buscar Célula</button>
-    </form>
+        <button type="submit">Buscar Célula</button>
+      </form>
 
-    <div id="resultadoCelula"></div>
+      <div id="resultadoCelula"></div>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Igreja Cristo Vive - Ministério de Células</p>
+    <p>&copy; 2025 1ª IEQ RESERVA PR | Ministério de Células</p>
   </footer>
 </body>
 </html>
