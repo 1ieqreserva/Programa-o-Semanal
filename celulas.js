@@ -2,32 +2,38 @@ const celulas = [
   {
     tipo: "homens",
     bairro: "centro",
-    endereco: "Rua da Esperança, 100",
-    anfitriao: "Carlos Mendes",
-    telefone: "(42) 99999-1234"
+    nome: "Célula Gideões - Prontos para Batalha",
+    endereco: "Av. Coronel Rogério Borba, Nº 1119",
+    anfitriao: "Roberto Hornung"
   },
   {
-    tipo: "moças",
-    bairro: "jardim das flores",
-    endereco: "Rua Vitória, 88",
-    anfitriao: "Luciana Souza",
-    telefone: "(42) 98888-5678"
-  },
-  {
-    tipo: "casais",
-    bairro: "vila nova",
-    endereco: "Rua União, 200",
-    anfitriao: "Marcos e Ana",
-    telefone: "(42) 97777-6543"
-  },
-  {
-    tipo: "crianças",
+    tipo: "meninas",
     bairro: "centro",
-    endereco: "Rua dos Lírios, 310",
-    anfitriao: "Tia Nádia",
-    telefone: "(42) 99885-7777"
+    nome: "Célula Zoe",
+    endereco: "Casa da Pastora Jaqueline",
+    anfitriao: "Pastora Jaqueline"
   },
-  // Adicione mais células conforme necessário
+  {
+    tipo: "meninas",
+    bairro: "jardim social",
+    nome: "Célula Zoe",
+    endereco: "Casa da Pastora Jaqueline",
+    anfitriao: "Pastora Jaqueline"
+  },
+  {
+    tipo: "meninas",
+    bairro: "mercer",
+    nome: "Célula Zoe",
+    endereco: "Casa da Pastora Jaqueline",
+    anfitriao: "Pastora Jaqueline"
+  },
+  {
+    tipo: "meninas",
+    bairro: "santa helena",
+    nome: "Célula Zoe",
+    endereco: "Casa da Pastora Jaqueline",
+    anfitriao: "Pastora Jaqueline"
+  }
 ];
 
 document.getElementById("formCelula").addEventListener("submit", function (e) {
@@ -44,12 +50,11 @@ document.getElementById("formCelula").addEventListener("submit", function (e) {
 
   if (celula) {
     resultado.innerHTML = `
-      <h3>✅ Célula Encontrada:</h3>
+      <h3>✅ ${celula.nome}</h3>
       <p><strong>Endereço:</strong> ${celula.endereco}</p>
       <p><strong>Anfitrião:</strong> ${celula.anfitriao}</p>
-      <p><strong>Telefone:</strong> ${celula.telefone}</p>
     `;
   } else {
-    resultado.innerHTML = `<p style="color:red;">Nenhuma célula encontrada com esse perfil nesse bairro.</p>`;
+    resultado.innerHTML = `<p class="erro">Nenhuma célula encontrada com esse perfil nesse bairro.</p>`;
   }
 });
