@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Células - Igreja</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="celulas.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Células</h1>
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="celulas.html">Células</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="celulas">
+      <h2>🔍 Encontre a Célula Mais Próxima</h2>
+      <form id="formCelula">
+        <label for="tipo">Tipo de Célula:</label>
+        <select id="tipo" required>
+          <option value="">Escolha</option>
+          <option value="homens">Homens</option>
+          <option value="rapazes">Rapazes</option>
+          <option value="meninos">Meninos</option>
+          <option value="crianças">Crianças</option>
+          <option value="moças">Moças</option>
+          <option value="meninas">Meninas</option>
+          <option value="casais">Casais</option>
+        </select>
+
+        <label for="bairro">Seu Bairro:</label>
+        <input type="text" id="bairro" placeholder="Ex: Centro" required>
+
+        <button type="submit">Buscar Célula</button>
+      </form>
+
+      <div id="resultadoCelula"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Igreja Cristo Vive - Todos os direitos reservados</p>
+  </footer>
+</body>
+</html>
